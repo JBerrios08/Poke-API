@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafío Poke API</title>
+
+    <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="estilos.css" />
+</head>
+<style>
+    .container-boton {
+        display: flex;
+        justify-content: center;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: hsl(185, 75%, 39%);
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+</style>
+
+<body>
+    <main class="flex"></main>
+    <template id="template-card">
+        <article class="card">
+            <img src="./images/bg-pattern-card.svg" alt="" class="card-header" />
+            <div class="card-body">
+                <img src="./images/image-victor.jpg" alt="" class="card-body-img" />
+                <h1 class="card-body-title">
+                    <span>id</span>
+                    Nombre
+                </h1>
+                <p class="card-body-text">exp</p>
+            </div>
+            <div class="card-footer">
+                <div class="card-footer-social">
+                    <h3>80K</h3>
+                    <p>🔥Ataque</p>
+                </div>
+                <div class="card-footer-social">
+                    <h3>803K</h3>
+                    <p>🏆Especial</p>
+                </div>
+                <div class="card-footer-social">
+                    <h3>1.4K</h3>
+                    <p>🛡️Defensa</p>
+                </div>
+            </div>
+            <div class="container-boton">
+                <button onclick="recargarPagina()">Recargar página</button>
+            </div>
+        </article>
+    </template>
+</body>
+
+<script src="./app.js"></script>
+<script>
+    function recargarPagina() {
+        location.reload();
+    }
+</script>
+
+</html>
